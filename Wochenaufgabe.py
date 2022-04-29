@@ -11,12 +11,12 @@ st.subheader('Teamvorstellung')
 st.write('Wir sind Jorgo, Deborah und Daniel und wir alle studieren Wirtschaftsinformatik im 4. Semester.')
 
 st.subheader('Projektvorstellung')
-st.markdown('Wir haben uns als Projekt für Image Captioning entschieden. \n'    
+st.markdown('Wir haben uns als Projekt für Image Captioning entschieden. \n'      
             'Das heißt, wir sollen ein Modell trainieren, welches in der Lage ist eine Bildunterschrift für Bilder einer spezifischen Domäne, also innerhalb eines spezifischen Bereiches, zu erzeugen.')
 
 st.subheader('Datenset')
-st.markdown('Als Datenset sollen wir zum trainieren und testen das LAION5B Datenset verwenden, welches eine Sammlung von 6 Milliarden Bildern und 240 TB an Größe darstellt. \n'  
-            'In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden. \n'  
+st.markdown('Als Datenset sollen wir zum trainieren und testen das LAION5B Datenset verwenden, welches eine Sammlung von 6 Milliarden Bildern und 240 TB an Größe darstellt. \n'    
+            'In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden. \n'    
             'Hierzu einfach eine Zeile selektieren.')
 
 
@@ -53,7 +53,7 @@ def aggrid_interactive_table(df: pd.DataFrame):
 selection = aggrid_interactive_table(df)
 
 if selection:
-    st.write("Hier siehst du das Bild welches du ausgewählt hast:")
+    st.write("Hier siehst du das Bild, welches du ausgewählt hast:")
     url = selection["selected_rows"][0]["url"]
     id = selection["selected_rows"][0]["id"]
     filename = str(id) + '.jpg'
