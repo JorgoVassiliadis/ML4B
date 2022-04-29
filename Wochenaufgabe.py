@@ -11,12 +11,12 @@ st.subheader('Teamvorstellung')
 st.write('Wir sind Jorgo, Deborah und Daniel und wir alle studieren Wirtschaftsinformatik im 4. Semester.')
 
 st.subheader('Projektvorstellung')
-st.markdown('Wir haben uns als Projekt für Image Captioning entschieden.' <br>
+st.markdown('Wir haben uns als Projekt für Image Captioning entschieden.<br>' 
             'Das heißt, wir sollen ein Modell trainieren, welches in der Lage ist eine Bildunterschrift für Bilder einer spezifischen Domäne, also innerhalb eines spezifischen Bereiches, zu erzeugen.')
 
 st.subheader('Datenset')
 st.markdown('Als Datenset sollen wir zum trainieren und testen das LAION5B Datenset verwenden, welches eine Sammlung von 6 Milliarden Bildern und 240 TB an Größe darstellt.'
-            'In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.' <br>  
+            'In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.<br>' 
             'Hierzu einfach eine Zeile selektieren.')
 
 
