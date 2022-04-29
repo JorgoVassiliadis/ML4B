@@ -67,12 +67,12 @@ if selection:
 url = selection["selected_rows"][0]["url"]
 id = selection["selected_rows"][0]["id"]
 filename = str(id) + '.jpg'
-bool = os.path.exists(filename)
+bool = os.path.exists('pictures/' + filename)
 if not bool:
     r = requests.get(url, allow_redirects=True)
-    open(str(id) + '.jpg', "wb").write(r.content)
+    open("pictures/" + str(id) + '.jpg', "wb").write(r.content)
 
-st.image(str(id) + '.jpg')
+st.image('pictures/' + str(id) + '.jpg')
 st.write(selection["selected_rows"][0]["caption"])
 
 
