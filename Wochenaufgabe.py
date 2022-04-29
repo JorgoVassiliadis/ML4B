@@ -51,8 +51,8 @@ def aggrid_interactive_table(df: pd.DataFrame):
 
 
 selection = aggrid_interactive_table(df)
-st.write(selection)
-if selection:
+
+if len(selection["selected_rows"]) > 0:
     st.write("Hier siehst du das Bild, welches du ausgewählt hast:")
     url = selection["selected_rows"][0]["url"]
     id = selection["selected_rows"][0]["id"]
