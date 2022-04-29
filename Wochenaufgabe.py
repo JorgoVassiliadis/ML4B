@@ -16,7 +16,7 @@ st.write('Das heißt, wir sollen ein Modell trainieren, welches in der Lage ist 
 
 st.subheader('Datenset')
 st.write('Als Datenset sollen wir zum trainieren und testen das LAION5B Datenset verwenden, welches eine Sammlung von 6 Milliarden Bildern und 240 TB an Größe darstellt.')
-st.write('In der nachfolgenden Tabelle ist ein Ausschnitt aus einer Metadatendatei dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.')
+st.write('In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.', "Hierzu einfach eine Zeile selektieren.")
 
 
 df = pd.read_json('DogSubset.json')
@@ -53,18 +53,15 @@ selection = aggrid_interactive_table(df)
 
 if selection:
     st.write("You selected:")
-    #st.json(selection["selected_rows"])
-    
-url = selection["selected_rows"][0]["url"]
-id = selection["selected_rows"][0]["id"]
-filename = str(id) + '.jpg'
-bool = os.path.exists('pictures/' + filename)
-if not bool:
-    r = requests.get(url, allow_redirects=True)
-    open("pictures/" + str(id) + '.jpg', "wb").write(r.content)
-
-st.image('pictures/' + str(id) + '.jpg')
-st.write(selection["selected_rows"][0]["caption"])
+    url = selection["selected_rows"][0]["url"]
+    id = selection["selected_rows"][0]["id"]
+    filename = str(id) + '.jpg'
+    bool = os.path.exists('pictures/' + filename)
+    if not bool:
+        r = requests.get(url, allow_redirects=True)
+        open("pictures/" + str(id) + '.jpg', "wb").write(r.content)
+    st.image('pictures/' + str(id) + '.jpg')
+    st.write(selection["selected_rows"][0]["caption"])
 
 
 
