@@ -8,7 +8,7 @@ import os.path
 st.title('Projektpräsentation')
 st.subheader('Teamvorstellung')
 
-st.write('Wir sind Jorgo, Deborah und Daniel und wir alle studieren Wirtschaftsinformatik im 4. Semester.')
+st.write('Wir sind Jorgo, Debora und Daniel und wir alle studieren Wirtschaftsinformatik im 4. Semester.')
 
 st.subheader('Projektvorstellung')
 st.write('Wir haben uns als Projekt für Image Captioning entschieden.  \n' 
