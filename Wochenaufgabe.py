@@ -16,7 +16,8 @@ st.markdown('Wir haben uns als Projekt für Image Captioning entschieden.<br>'
 
 st.subheader('Datenset')
 st.markdown('Als Datenset sollen wir zum trainieren und testen das LAION5B Datenset verwenden, welches eine Sammlung von 6 Milliarden Bildern und 240 TB an Größe darstellt.'
-            'In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.<br>' 
+            'In der nachfolgenden Tabelle ist ein Ausschnitt aus einem Subset dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.'  
+            
             'Hierzu einfach eine Zeile selektieren.')
 
 
