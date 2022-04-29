@@ -43,7 +43,6 @@ toolz==0.11.2
 tqdm==4.64.0
 tzdata==2022.1
 tzlocal==4.2
-urllib3 @ file:///C:/ci/urllib3_1650639883891/work
 validators==0.18.2
 watchdog==2.1.7
 webencodings==0.5.1
