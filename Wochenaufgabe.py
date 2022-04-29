@@ -3,12 +3,7 @@ import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 import requests
-from pathlib import *
 import os.path
-import numpy as np
-from pyarrow.parquet import ParquetFile
-import pyarrow as pa 
-
 
 st.title('Projektpräsentation')
 st.subheader('Teamvorstellung')
@@ -23,10 +18,6 @@ st.subheader('Datenset')
 st.write('Als Datenset sollen wir zum trainieren und testen das LAION5B Datenset verwenden, welches eine Sammlung von 6 Milliarden Bildern und 240 TB an Größe darstellt.')
 st.write('In der nachfolgenden Tabelle ist ein Ausschnitt aus einer Metadatendatei dargestellt, welchen man benutzen kann um die entsprechenden Bilder mithilfe der URL zu downloaden.')
 
-#pf = ParquetFile('FirstData.parquet') 
-#rowNumber = next(pf.iter_batches(batch_size = 1000)) 
-#df = pa.Table.from_batches([rowNumber]).to_pandas() 
-#st.write(df)
 
 df = pd.read_json('DogSubset.json')
 
